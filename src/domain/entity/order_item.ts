@@ -1,4 +1,4 @@
-export default class OrderItem {
+export class OrderItem {
   private _id: string
   private _productId: string
   private _name: string

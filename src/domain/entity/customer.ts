@@ -1,6 +1,6 @@
-import Address from './address'
+import { Address } from '../entity'
 
-export default class Customer {
+export class Customer {
   private _id: string
   private _name = ''
   private _address!: Address

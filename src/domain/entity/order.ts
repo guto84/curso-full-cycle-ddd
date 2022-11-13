@@ -1,5 +1,5 @@
-import OrderItem from './order_item'
-export default class Order {
+import { OrderItem } from '../entity'
+export class Order {
   private _id: string
   private _customerId: string
   private _items: OrderItem[]

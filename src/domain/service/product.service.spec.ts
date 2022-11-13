@@ -1,5 +1,5 @@
-import Product from '../entity/product'
-import ProductService from './product.service'
+import { Product } from '../entity'
+import { ProductService } from '../service'
 
 describe('Product service unit tests', () => {
   it('should change the prices of all products', () => {
