@@ -15,6 +15,7 @@
   },
   "scripts": {
     "test": "npm run tsc -- --noEmit && jest",
+    "test:watch": "jest --watchAll",
     "tsc": "tsc"
   },
   "dependencies": {
