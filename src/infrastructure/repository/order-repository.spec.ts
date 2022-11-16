@@ -206,33 +206,33 @@ describe('Order repository', () => {
 
     await orderRepository.update(order)
 
-    // const orderModel = await OrderModel.findOne({
-    //   where: { id: order.id },
-    //   include: ['items'],
-    // })
+    const orderModel = await OrderModel.findOne({
+      where: { id: order.id },
+      include: ['items'],
+    })
 
-    // expect(orderModel.toJSON()).toStrictEqual({
-    //   id: '1',
-    //   customer_id: '1',
-    //   total: order.total(),
-    //   items: [
-    //     {
-    //       id: orderItem1.id,
-    //       name: orderItem1.name,
-    //       price: orderItem1.price,
-    //       quantity: orderItem1.quantity,
-    //       order_id: orderModel.id,
-    //       product_id: product1.id,
-    //     },
-    //     {
-    //       id: orderItem2.id,
-    //       name: orderItem2.name,
-    //       price: orderItem2.price,
-    //       quantity: orderItem2.quantity,
-    //       order_id: orderModel.id,
-    //       product_id: product2.id,
-    //     },
-    //   ],
-    // })
+    expect(orderModel.toJSON()).toStrictEqual({
+      id: '1',
+      customer_id: '1',
+      total: order.total(),
+      items: [
+        {
+          id: orderItem1.id,
+          name: orderItem1.name,
+          price: orderItem1.price,
+          quantity: orderItem1.quantity,
+          order_id: orderModel.id,
+          product_id: product1.id,
+        },
+        {
+          id: orderItem2.id,
+          name: orderItem2.name,
+          price: orderItem2.price,
+          quantity: orderItem2.quantity,
+          order_id: orderModel.id,
+          product_id: product2.id,
+        },
+      ],
+    })
   })
 })
