@@ -6,6 +6,6 @@ export class SendEmailWhenProductCreatedHandler
 {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   handle(event: ProductCreatedEvent): void {
-    console.log(`sending email to ...`)
+    // console.log(`sending email to ...`)
   }
 }
