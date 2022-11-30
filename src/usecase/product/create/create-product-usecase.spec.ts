@@ -39,7 +39,7 @@ describe('unit test for create product use case', () => {
     await expect(usecase.execute(input)).rejects.toThrow('Name is required')
   })
 
-  it('should throw an error when price is incorect', async () => {
+  it('should throw an error when price is incorrect', async () => {
     const productRepository = MockRepository()
     const usecase = new CreateProductUsecase(productRepository)
     const input = {
